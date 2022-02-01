@@ -1,0 +1,15 @@
+{
+    "discord_token": "Discord Bot Token",
+    "discord_channels": [
+        "Discord Channel 1",
+        "Discord Channel 2"
+    ],
+
+    "telegram_token": "Telegram Bot Token",
+    "telegram_channels": [
+        -100,
+        -100
+    ],
+
+    "imgur_application": "Imgur Application ID"
+}
