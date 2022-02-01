@@ -1,8 +1,8 @@
 {
     "discord_token": "Discord Bot Token",
     "discord_channels": [
-        "Discord Channel 1",
-        "Discord Channel 2"
+        "Channel 1",
+        "Channel 2"
     ],
 
     "telegram_token": "Telegram Bot Token",
@@ -11,5 +11,5 @@
         -100
     ],
 
-    "imgur_application": "Imgur Application ID"
+    "imgur_application": "Imgur Application ID  (Client Token)"
 }
