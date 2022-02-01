@@ -1,16 +1,16 @@
 # Telegram to Discord relay
 ###### Basic relay between platforms, easily setup and capable of sending messages to multiple Discord channels for different Telegram Groups
 
-Setup:
+## Setup:
 
-```
+```console
 cd telegram-relay-latest
 npm install
 ```
 
-Add your information to `config.json`[^1]
+Add your information to [`config.json`](https://github.com/Smigg-y/telegram2discord-relay/blob/main/telegram-relay-latest/config.json)[^1]
 
-```
+```json
 {
     "discord_token": "Discord Bot Token",
     "discord_channels": [
