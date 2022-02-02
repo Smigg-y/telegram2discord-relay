@@ -1,11 +1,12 @@
 const { Telegraf } = require('telegraf');
 const bus = require('./messagebus');
 const { ImgurClient } = require('imgur');
-const { telegram_token, telegram_channels, imgur_application } = require('./../config.json');
+const { telegram_token, telegram_channels, discord_channels, imgur_application } = require('./../config.json');
 
 const bot = new Telegraf(telegram_token);
 const client = new ImgurClient({ clientId: imgur_application });
 
+var chDef = 0;
 bot.on('message', async (ctx) => {
     const {
         text,
@@ -32,10 +33,14 @@ bot.on('message', async (ctx) => {
         console.log(err);
     };
 
-    for(var key in telegram_channels) {
-        if(id === telegram_channels[key]) {
-            var chDef = key;
+    if(discord_channels.length < 1) {
+        for(var key in telegram_channels) {
+            if(id === telegram_channels[key]) {
+                chDef = key;
+            };
         };
+    } else {
+        chDef = 0;
     };
     
     if(text !== undefined) {
